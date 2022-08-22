@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -19,6 +20,7 @@ public class Contract {
     private Double price;
     private LocalDate dateOFConclusion;
 
+
     @ManyToOne
     @JoinColumn(name = "type_contract_id")
     private TypeContract typeContract;
@@ -30,6 +32,9 @@ public class Contract {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    @OneToOne(mappedBy = "contract")
+    private SellEstate sellEstate;
 
 
     public Contract(){}

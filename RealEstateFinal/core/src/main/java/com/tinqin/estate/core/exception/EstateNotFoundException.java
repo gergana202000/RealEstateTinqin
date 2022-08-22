@@ -1,4 +1,4 @@
 package com.tinqin.estate.core.exception;
 
-public class EstateNotFoundException {
+public class EstateNotFoundException extends RuntimeException{
 }

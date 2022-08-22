@@ -22,6 +22,14 @@ public class EstateByAddressProcessorCore implements EstateByAddressProcessor {
 
     @Override
     public Either<Error, EstateResponse> process(EstateRequest input) {
+        return null;
+    }
+
+   /* @Override
+    public Either<Error, EstateResponse> process(EstateRequest input) {
+        return Try.of(()->{
+            final
+        });
         return Try.of(()->{
             final Optional<Estate> estate = estateRepo.findEstateByAddress(input.getEstateName());
             return EstateResponse.builder()
@@ -30,6 +38,6 @@ public class EstateByAddressProcessorCore implements EstateByAddressProcessor {
         }).toEither()
                 .mapLeft(throwable -> {
                     return new EstateNotFoundError();
-                });
+                });*/
     }
 }

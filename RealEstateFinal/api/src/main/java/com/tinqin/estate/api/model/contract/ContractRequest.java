@@ -9,5 +9,5 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ContractRequest implements OperationInput {
-    private Long contractID;
+    private Integer number;
 }

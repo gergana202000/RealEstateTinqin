@@ -5,9 +5,9 @@ import lombok.*;
 @Builder
 @Getter
 @Setter(AccessLevel.PRIVATE)
-
+@NoArgsConstructor
+@AllArgsConstructor
 public class EstateRequest implements OperationInput {
-   /* private Long estateID;*/
-    private String estateName;
+    private String address;
 
 }

@@ -15,6 +15,7 @@ public class Estate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer estateId;
+    private String estateName;
     private Double price;
     private Double size;
     private String address;
@@ -36,6 +37,8 @@ public class Estate {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @OneToOne(mappedBy = "estate")
+    private SellEstate sellEstate;
 
     public Estate(){}
 
