@@ -12,5 +12,5 @@ import lombok.Setter;
 @Setter(AccessLevel.PRIVATE)
 
 public class UserRequest implements OperationInput {
-    private Long username;
+    private String username;
 }

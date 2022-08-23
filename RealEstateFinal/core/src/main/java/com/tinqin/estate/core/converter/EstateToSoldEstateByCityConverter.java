@@ -16,8 +16,6 @@ public class EstateToSoldEstateByCityConverter implements Converter<Estate, Sold
                 .userFirstName(source.getUser().getName())
                 .userLastName(source.getUser().getLastName())
                 .estateName(source.getEstateName())
-                /*.price(String.valueOf(source.getPrice()))
-                .size(String.valueOf(source.getSize()))*/
                 .build();
     }
 }
