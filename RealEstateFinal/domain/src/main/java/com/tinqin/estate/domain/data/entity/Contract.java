@@ -26,9 +26,9 @@ public class Contract {
     @JoinColumn(name = "type_contract_id")
     private TypeContract typeContract;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name = "contract_id")
-    private Contract contract;
+    private Contract contract;*/
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -40,12 +40,12 @@ public class Contract {
 
     public Contract(){}
 
-    public Contract(Integer number, Double price, LocalDate dateOFConclusion, TypeContract typeContract, Contract contract) {
+    public Contract(Integer number, Double price, LocalDate dateOFConclusion, TypeContract typeContract/*, Contract contract*/) {
         this.number = number;
         this.price = price;
         this.dateOFConclusion = dateOFConclusion;
         this.typeContract = typeContract;
-        this.contract = contract;
+        /*this.contract = contract;*/
     }
 
 
@@ -54,11 +54,11 @@ public class Contract {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Contract contract1 = (Contract) o;
-        return Objects.equals(contractId, contract1.contractId) && Objects.equals(number, contract1.number) && Objects.equals(price, contract1.price) && Objects.equals(dateOFConclusion, contract1.dateOFConclusion) && Objects.equals(typeContract, contract1.typeContract) && Objects.equals(contract, contract1.contract);
+        return Objects.equals(contractId, contract1.contractId) && Objects.equals(number, contract1.number) && Objects.equals(price, contract1.price) && Objects.equals(dateOFConclusion, contract1.dateOFConclusion) && Objects.equals(typeContract, contract1.typeContract) /*&& Objects.equals(contract, contract1.contract)*/;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(contractId, number, price, dateOFConclusion, typeContract, contract);
+        return Objects.hash(contractId, number, price, dateOFConclusion, typeContract/*, contract*/);
     }
 }
