@@ -12,7 +12,7 @@ public class EstateToEstateResponseConverter implements Converter<Estate, Estate
         return EstateResponse.builder()
                 .estateName(source.getEstateName())
                 .price(source.getPrice())
-                .size(source.getPrice())
+                .size(source.getSize())
                 .build();
     }
 }

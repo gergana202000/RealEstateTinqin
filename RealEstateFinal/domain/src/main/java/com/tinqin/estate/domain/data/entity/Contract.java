@@ -17,6 +17,7 @@ public class Contract {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long contractId;
     private Integer number;
+    private String contractName;
     private Double price;
     private LocalDate dateOFConclusion;
 

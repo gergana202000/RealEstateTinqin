@@ -3,6 +3,8 @@ package com.tinqin.estate.rest.controller;
 import com.tinqin.estate.api.base.Error;
 import com.tinqin.estate.api.model.estate.EstateRequest;
 import com.tinqin.estate.api.model.estate.EstateResponse;
+import com.tinqin.estate.api.model.estateByAddress.EstateByAddressRequest;
+import com.tinqin.estate.api.model.estateByAddress.EstateByAddressResponse;
 import com.tinqin.estate.api.operation.EstateByAddressProcessor;
 import io.vavr.control.Either;
 import org.springframework.http.HttpStatus;
@@ -18,8 +20,8 @@ public class HomeController {
     }
 
     @PostMapping("/estateByAddress")
-    public ResponseEntity<?> getEstateByAddress(@RequestBody EstateRequest estateRequest){
-        Either<Error, EstateResponse> response = estateByAddressProcessor.process(estateRequest);
+    public ResponseEntity<?> getEstateByAddress(@RequestBody EstateByAddressRequest estateByAddressRequest){
+        Either<Error, EstateByAddressResponse> response = estateByAddressProcessor.process(estateByAddressRequest);
         if(response.isLeft()){
             return ResponseEntity.status(response.getLeft().getCode()).body(response.getLeft().getMessage());
         }

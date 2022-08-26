@@ -7,7 +7,5 @@ import java.util.List;
 import java.util.Optional;
 
 public interface EstateRepo extends JpaRepository<Estate, Long> {
-    /*Optional<Estate> findEstateByAddress(String estateName);*/
     Optional<Estate> findEstateByAddress(String address);
-    /*List<Estate> findEstateByAddress(Estate address);*/
 }

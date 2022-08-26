@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Setter(AccessLevel.PRIVATE)
 
 public class ContractResponse implements OperationOutput {
-    private String contract;
+    private String contractName;
     private Double price;
     private LocalDate date;
 

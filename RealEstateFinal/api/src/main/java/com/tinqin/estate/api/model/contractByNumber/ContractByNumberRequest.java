@@ -1,13 +1,13 @@
-package com.tinqin.estate.api.model.soldEstateByCity;
+package com.tinqin.estate.api.model.contractByNumber;
 
 import com.tinqin.estate.api.base.OperationInput;
 import lombok.*;
 
 @Builder
 @Getter
-@Setter
+@Setter(AccessLevel.PRIVATE)
 @NoArgsConstructor
 @AllArgsConstructor
-public class SoldEstateByCityRequest implements OperationInput {
+public class ContractByNumberRequest implements OperationInput {
     private Integer number;
 }

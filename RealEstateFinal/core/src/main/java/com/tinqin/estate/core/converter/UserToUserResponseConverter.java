@@ -2,7 +2,6 @@ package com.tinqin.estate.core.converter;
 
 import com.tinqin.estate.api.model.user.UserResponse;
 import com.tinqin.estate.domain.data.entity.User;
-import jdk.incubator.vector.VectorOperators;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;

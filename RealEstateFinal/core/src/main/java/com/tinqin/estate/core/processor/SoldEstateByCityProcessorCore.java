@@ -9,7 +9,7 @@ import io.vavr.control.Either;
 import io.vavr.control.Try;
 import org.springframework.core.convert.ConversionService;
 
-public class SoldEstateByCityProcessorCore implements SoldEstateByCityProcessor {
+public class SoldEstateByCityProcessorCore {/*implements SoldEstateByCityProcessor {
     private final ConversionService conversionService;
     private final EstateRepo estateRepo;
 
@@ -23,5 +23,5 @@ public class SoldEstateByCityProcessorCore implements SoldEstateByCityProcessor 
         return Try.of(()->{
 
         });
-    }
+    }*/
 }
